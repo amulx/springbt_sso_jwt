@@ -1,0 +1,8 @@
+server:
+  port: 8086
+
+security:
+  oauth2:
+    resource:
+      jwt:  #项目启动过程中，检查到配置文件中有security.oauth2.resource.jwt 的配置，就会生成 jwtTokenStore 的 bean，对令牌的校验就会使用 jwtTokenStore
+        key-value: testKey   # 设置签名key 保持和授权服务器一致
